@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Edu Longo Dev 🌊</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link href="card-profile.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/220px-Repl.it_logo.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="script.js"></script>
+  </head>
+    <body>
+	  
+        <div class="container">
+	  
+		<!--────────────────Header───────────────-->
+	<header>
+		<a class="logo" href="#home">
+              <img src="img/video.png" alt="repl logo" />
+		</a>
+		<nav>	
+		 <ul class="nav-bar"><div class="bg"></div>
+			<li><a class="nav-link active" href="#home">Home</a></li>
+       <li><a class="nav-link" href="#listra">O Edu</a></li>
+			<li><a class="nav-link" href="#projects">Cases</a></li>
+			<li><a class="nav-link" href="#contact">Sociais</a></li>
+		 </ul>
+			
+			<div class="hamburger">
+				<div class="line1"></div>
+            <div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!--─────────────────Home────────────────-->
+	  <div id="home">
+		 <div class="filter"></div>
+		 <section class="intro">
+       <div class="intro-edu">
+		      <h3>Edu Longo<hr>       
+          </h3>
+         <img src="img/pc_2.png" alt="repl logo" />
+       </div>
+		  <p>Padawan Developer.</p>
+		  <h2>Front-end, Mobile e Back-end.</h2>
+          <p>Manézinho de Floripa-SC, Tocador de violão e Doutorando.</p>
+			  
+		  <!--────social media links─────-->
+			 
+		  <div class="social-media">
+			  <a href="https://codepen.io/edulongodevgeo" target="_blank"><i class='fab fa-codepen'></i></a>
+			  <a href="https://github.com/edulongodevgeo" target="_blank"><i class='fab fa-github'></i></a>
+			  <a href="https://www.linkedin.com/in/eduardo-longo-devgeo" target="_blank"><i class='fab fa-linkedin-in'></i></a>
+		    </div>
+			 
+		 </section> 
+	  </div>  
+    
+    <!--───────────────modal-profile───────────────-->
+
+    <div id="listra"></div>
+		
+    
+	  <div id="edu"> 
+		 <h3>WHO?🧠</h3> 
+
+  <p>
+    <label class="btn" for="modal-1">Edu front-end</label>
+    <label class="btn" for="modal-3">Edu Mobile</label>
+    <label class="btn" for="modal-2">Edu Back-end</label>
+  </p>
+</div>
+
+
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h2>FRONT-END!</h2>
+    <img src="img/edu_front.png"/>
+    <p>🌞 Curte MUITO fazer telinha
+      <br>🚀 HTML & CSS
+      <br>🌊 Compreende os hypes do momento
+      <br>🛸 Preza por criatividade
+      <br>🌒 Não dispensa equilíbrio
+    </p>
+  </div>
+</div>
+
+
+
+<input class="modal-state" id="modal-3" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-3"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-3"></label>
+    <h2>MOBILE!</h2>
+    <img src="img/edu_back_2.png"/>
+    <p>🚀 Flutterzeiro
+      <br>🌒 Criação de Apps é arte
+      <br>🛸 Dart é massa!
+      <br>🌞 Android Studio + Java também rola
+      <br>🌊 Começando a brisar com Kotlin
+    </p>
+  </div>
+</div>
+
+    
+
+<input class="modal-state" id="modal-2" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-2"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-2"></label>
+    <h2>BACK-END</h2>
+    <img src="img/edu_back.png"/>
+    <p>🎓 Começou nessa vida com Java
+      <br>🎶 Hibernate, JPA, JWT e demais
+      <br>💻 Valoriza um bom Spring Boot
+      <br>🪐 PostGreSQL, MySQL e outros SGBD
+      <br>🌔 Se vira nos 30 com querys SQL
+    </p>
+  </div>
+
+      
+    </div>
+
+
+    <div id="listra"></div>
+
+
+	  <!--───────────────Projects───────────────-->
+	  <div id="projects"> 
+		 <h3>Projetinhos<hr></h3>
+		  <p>Conheça um pouco do que faço 🛸</p>
+		  <div class="work-box">
+		  <div class="work">
+		<!--───────────────card-projects───────────────-->
+						<div class="card">
+			    <img class="work-img" src="img/game_chips.png">
+			    <a href="https://games-chips-deploy.vercel.app/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Landing Page para projeto de API REST (comunidade gamer)</div></a>
+            </div>
+
+        			<div class="card">
+			    <img class="work-img" src="img/cyberjunk.png">
+			    <a href="https://cyberjunk.eduardolongo1.repl.co/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Home criativa/disruptiva com menu lateral</div></a>
+            </div>
+
+        			<div class="card">
+			    <img class="work-img" src="img/tela_login.png">
+			    <a href="https://teladeloginbacana.eduardolongo1.repl.co/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Tela de Login Bacana e responsiva (um clássico)</div></a>
+            </div>
+        
+        
+        <div class="card">
+			    <img class="work-img" src="img/viacep.png">
+			    <a href="https://viacep.eduardolongo1.repl.co/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Pagezinha de "buscaCEP" consumindo API</div></a>
+            </div>
+			<div class="card">
+			    <img class="work-img" src="img/geolab_covid.png">
+				<a href="https://github.com/edulongodevgeo/Painel-Geolab-UDESC---COVID-19" target="_blank"> <!--Link to project-->
+				<div class="work-content">Website para acompanhamento de casos de covid em SC - UDESC</div></a>
+            </div>
+            <div class="card">
+			    <img class="work-img" src="img/issTracker.png">
+				<a href="https://github.com/edulongodevgeo/iss_webmap" target="_blank"> <!--Link to project-->
+				<div class="work-content">Webmap para consumo de api-tracker do satélite ISS</div></a>
+            </div>
+            <div class="card">
+			    <img class="work-img" src="img/floripa_beach.png">
+				<a href="https://github.com/edulongodevgeo/deploy-webmap-beachs" target="_blank"> <!--Link to project-->
+				<div class="work-content">Webmap responsivo e informativo sobre geolocalização das praias de Floripa-SC</div></a>
+            </div> 
+			<div class="card">
+			    <img class="work-img" src="img/frontDevSaber.png">
+				<a href="https://github.com/edulongodevgeo/front-dev-saber" target="_blank"> <!--Link to project-->
+				<div class="work-content">Exercício criativo de website (constantes mudanças)</div></a>
+            </div>
+			<div class="card">
+			    <img class="work-img" src="img/e-valor_eng.png">
+				<a href="https://evalor-engenharia.vercel.app/#home" target="_blank"> <!--Link to project-->
+				<div class="work-content">Website de empresa de engenharia (em desenvolvimento)</div></a>
+            </div> 	  
+			<div class="card">
+			    <img class="work-img" src="img/prancheta.png">
+				<a href="https://prancheta-v-02-inproduction.vercel.app/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Website e sistema de confronto de overall de times de futebol (em desenvolvimento)</div></a>
+            </div> 	  
+
+			<div class="card">
+			    <img class="work-img" src="img/apiLocadora.png">
+				<a href="https://locadora-edu-films.vercel.app/" target="_blank"> <!--Link to project-->
+				<div class="work-content">Exercício de consumo de API films.</div></a>
+            </div> 	
+
+
+
+			<div class="card">
+			    <img class="work-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAMAAAA3vsLfAAAAhFBMVEX///9tsj9rsTxpsDlmrzNkri/6/fjV6MqVxnZ+u1XR5sbp8+P2+vRssjpxtEVytUKOwm+nz4+u05nL4r2ayH9hrSl0tUq52afb69Lg7tjy+O7E37WFvmGfy4Tz+fDm8eCy1Z6KwGdcqx+r0ZS62aiAu1qWxnmdyoPH4bh7ulGhy4qJv2qrBRBQAAATIUlEQVR4nO1daXuyOhOWJGAVoW6IqHVpxWr7///fy5JMtonQpy5vz8X94TnHEkJyM0lmJjOh1+vQoUOHDh06dOjQoUOHDh06dOjQoUOHDnfBLM9P2bMb8edwSgih/uzZzfhjWCdeAUI7efsRYlLS5rGPZzfkb+G9Ys2j389uyN8C47TNn92Qv4XPmrdk+OyG/C2EMSOE+J2w/RCryWIxOAfPbsbfQ9Bx1qFDhw63RrDs/wSj+zTi4RN8EFjP/EHXZhOP/QjkZd2yh/1jvonjOM+n56V2S/ay8CY7aOys+FkiP/atvk0H8WDKb16tD8Wv/bb+9XbxTlD+nMf5WfzYned5+dz50WXoFy2rrYzBdCn+tvoofh7b9Ww48GltFLcHZYtji/cyu7BSIy1RkJ3L9vVmES3+RmveRmnMKJS7GK/k2y+V2nHdLVIV9MdVkUVROWXTqlQwLosltVmfnSivsPjvBrMizrJlxSMPdcNWXvk31kZ/3k6Sn3JWgfjfTQ6bfu5rVRPmb7hsBDmt/vJaUVh0X6t5sFY7WJtQLC0qhIJJ6WRL/brWipa9X18oCAjeKNVe8cvKaFkhKVrLKNuX7+GD1RU2e6JWC/YvpFXPiqzxpLPGqH2Pv6nalCW8+0WXU2a+N5LMpSiP61rooXeUL5h+FlcW3HH0pRb77G3HZpfYRuftg1ot84siAb+PNQ7T4GJ3rTWuv5Y+PvJpXHZh6PPWzrjMmB39FrwFnBySC6qrWl6KS6/1FVqO31HEL3yODrYgaLyNvrAn0sE2oErlV/H1z7JW1X9wz29LD1gjGn/+XqWtv8b6UHRUVB1wZ6QX50o19M2kTVyYzzFBYOPGPrPNlj+gkTb1Bf4L/NRZ9YG3vpjQ4k3xD8he5R4TtNET/yuh1KeqfLJ61pe0ecrFWs4x2qAY0V+WHBgfynsqVgwfHksPooVNtJ1+MUTrtrn0kF0iOvGRhb1dNnsTs3BFtaDN4zMSyV/m5/E4VmZqf23QBqCMVddw2qqnMrYYxEyZNIGKvtJl5n1PZrO38aUuSMyyDqx/NUSrJ5wcVU/rqskrTCqj9aBc31kUqLRVhajYtQvXygrFQoy2ooJNWhd30sbyfX8VhMNCXZF/448YAG0k+gpF0y4qEw20bRf/pHpoSByrApdjdlb/uPwk5LNqqkob9aQ611t9Qgfq1hu0sXgNOrKDNhLB1LF6g9r48jjzZU3q8npSG3SdNnQN+yEKvQDFhisHxiAWpoxCG9voZT6gp35m0eZ/KSUdtDFVLwLeyKX6fRG1MWOcKMvrddpGNxA2l7gFgrYddlWljWzM6RF6WgmIRtu7pinitPmqrlwo/mKJGJQ/Z8Diq9mkN0PMXZj+emarnoFutwna6Bi7qtL2vjSvjYREkIVBW6Lr1yhtJNdrA+GtBB+4oaHVpvdWtC1/qXwIoEpI8M1nXja226fSxvb2xb646O802tibXg6lzYxtWIn7aUmbeCNmVSUyWN2v0Tb+pfIBMOevCqB00tcXZBgDbe+mudiTouqVeoaitxGjHEobCx2VlbSF0GfsZb62UHfPzayVXosW3DJM3Ppy8qJ0sDaZA3UXXVHE9FE6NyRtlqmI0haZhsuLMJkC+VhzJNc4iv1qN21bW4s0QeN9mk5aTICoaaoKM2FU6FoGbdgYLZ0AvAVzhbZqpmukzVYkVdpSUfGXWapE1kzbvpEOuqg1rOYpEH1Mphs3lJFDurVow6OsdtwuL5c7oM0mBLdJ29CGP7bZlB81ChtZ8OE/a9buUCVkSYwBTtkCiJOmPNa6ULQuUmhjVld/QZu1fFdopK15Pag8WhWixuFMLpgnZLkwHWnEzzOdtgS3afk0TlTaIuvd/Jy2DXXV1Yq2ZfOMxSai8FfzsoB7QlbT2CSOJmudNmQhLX2/QsIkbWRhMfxz2oQS53AUNtF2wJkgysopaQO1uFxZcckj8RZ9zmq6MW/xzyptjrmNP1Gd225CGwxSdG5omtuWDtfgIl2PhTFi00YX6Wzi8KGjSkiF/nRTbofIoonq3WVr7B5YEi53og13ezespEGOyQxhaTlDLUVop0kbPZQSFc5RysnCYXyWj8vO356UuWrxB9om2B1nRT25KW3X1cX1ddr2WM+J8PHwm03ayIBPQ1OUN+YwPjm2+1cQ02ilWAk+tpiIBUtVd29CWwgvD7MSxtcHKaaJ8W2zEhFKm2wPzptjTZfYw2ZdqNqkyCgFM9If3pi2gDi1GWWHAKctRaYnovS6bqdJmzKcUN5cvg4JsXyXZEgPCKKCiPWOeMGNaYPtF+590wDrJErbEhwkCnzFC9skbQ7eqh2pq/jkHt+9Sput/INdUl26LW2gu9tb730YhChtmPKRKEPliM9tta+V44QJrKqErNL93hoH3CuiS1u9wa5gB97TsuCNaevJyqcGa7JLGG2Ym02dzwXpFm1koaimOcK9YpZvc58x/8PQZfkL0+a28vdRJSSLRdW1A/bGtEkfrs7bULGFENpGiKlEBnI5A48HorcROZIzzKZlMD/WazUjGnGg4q6MnSt/DIIcTqSKV3u3b0xb+Ar1swUsp9lJVcoR2jDPh+JrnsiNHcxKkFoi5lCS2hCXK8LiQ5+3LVjzBldOfY02j9JNusyybDhRd+jqSe/GtPVmcrQRb7AuHrs8HnSvg03b1sOEDS4rO9YIbVK3K52m2DAV/MP8SSiL85cC44F4n5U9JRUQ3lJGme4UJd7uLrQFc+WFkzpcT5Swui6ACZvcBFF9axhtqp4yRFZTELe1UhEhtAS4thfq3ezo8K8QyvXIW9MmYsRssDf1xapYIm2UHqKlKooobYW+A8sltiIL5TWY2KFQHIm2vewP+6h3QMp1W9qEM7ORtt4uRtvmr8ViatGGudl8YR4EGhE4bUoWIua+JEwsLkMjJFAUMBxHRQuHyH4FI7Ll3IAmuZO2cioS8Vy2GvgmLDW4f3WyXxXxU1CzIyP8EvN8yJntQ7vqoE2uHyHBFtO9uCuY2cQVSwQXR9VxlOVGL4h/UhwD/GUiVohwOlTP/JRBlzr4o8irQvuU6JMVYZel3LkihsGKCpvQdFe6TuGiTW76vGGyrprms9xTXEakIG0vFBLN3zY6lkG4ohhlehpVWE3VFLF5s/fyJkqqSpfVS6Ke5RoY5ax6FZrxG34RXzyyathWChXZ6BWgng/Ynv7QX4CLNilu6CYD1bbSwvUm9phfgNE4nzq3YEbHPOZB6PHn0BiNy0tx/wDzFAyLqlnMlb7+ovixQIqtxkUxzzAKiqZdikeWLfPyOvBc6AbG1vMKU1HlNtpGv+qkjYnNMkyZqWOOVQRhf1ign2lk2N7dbX99PKb9PrK5sOoP+6jzvBcWFcMNQfEDLdXLhkN5fxCK/w/6ZdP6/GWCoW14zNE9Piqo7Ruy46TN80VD0aBCaog4jutO8XtiHSfJJ+JtmwqdSVEWSvTRDU9ws5nkXKFt7bjAL+9bNP5ptA3LaHOazM/6n5cbkBpfd5hjar1cNQJjjF6hDba0HZG/SYs8j6fRNuB6iv/+ss6CqqWj1WyTADlUDxwzByFnLRZJOWawm5s2CA0LHdsx++bWP4s2JX6pjHa+lIh8VQFK9E0Rh7AJrS0zKXDTBtEpIw8Haxa350mbRkOVO6S13WhQH5cMsCItE/MKbQkf2FtsJfVaidvTaMNtOaDR3Cd3BIXDumddb0FbMMCbIK1cJ563kvZffWeUARu0sUZ/S1sPTThBrW4TYt89uZ62dQ+s+uMEC9sjzJ9b2qG5UP6ANisGBGhzBeBYoXk26oB2iobn3R3Z/hCpOTeEUsbyCbJD7ogKh7nNspQglHlrqRkwt0U4a21UkOCUFJbUAVf+H4Cw/3YYRFG5JETR6+G03qFtvuC0gdlqO0eEQ8l2f/siecTBWivNLeh/HE3r88HY7sIyg30XolHZFXD9Q5qkme2B8koLd2RvRoMLZvvqoI3cJ5f+CXAkIZBY5B/aqyKhi/kpsu+DHQpL1xMF/jsng50dXbR3TTTi0NxModu4Mt0YGlD8J7FCvTxKLhkWGYIDInVdUeRP0CruBscohS2LXWvafFGlIxvVlb32J4E6KVU35bdTedYBY3TnCCH/LwmbW9zE6uuITLUAuwWOLPd2fso/gxFuQcqNxXZJWI3lITLpOB6kbo3oz8DhcYPEylYpfyQRxR2ToXB/BBufFmbeI87EzfaXaVMs5y+Az14yHhOPLjVkCUq/4bSJ6Eh+gkt0v+4IpD4jrI1v9B+RoUqIFLeRKzpC4Rg2eXeOISo2GsYymO2+qDdI77kQ4flpUoAc0REKaxswm9DNZbkeiDiy+zvUXuAwn3sBV0LIBfwQmZleZrIGe2E73PsB6SVhZL6Te0HE0ll5k7cDui+vbkNn1848UlgL8HlSKh+Po40rCCS+3yMcvfVliM3u4rQW/Be574rrbMQDuf1P0ebQaSHDpcB2ip/nRtU8JUeGIJOBFv8t2hw6qqbZD83AqbIAVb+CEeC+YuJJcfyP0ebQafUIhGFO1Agrypj+6RDkhDRD2EzaVutjunQ7L4MsLa5f1VVWs+MxDZH8y/wRtDkUBy/Z6408HjwqQqfmZ31zwsEaVeMdVdqyF1ZuHPjJK6rMZ9NFUl9nB8dJoefPKPGLIkkSTfVQx+AMkn9e3+mE1uo5Lr/F3iy4Glaw9nM2jkVDC9wD2oarMQRYEJZYsetZQakSYGA1o8D0XW5tFlUMFMV2/C5vLolH7r4RcCWk6GCOZyAbCN8dKoqubwra6Fukx/y/G5JrLkD+wDBjMyNg1CPv4D225P79brYCnoRb9mjQ4plDNJK57Eys8SFo80ySiXqMQ4iMd6oHFp6R6AM4hMvKurvjlzqcng7iTxp24IIXp7Vv2NKhaw9Vi4RCZ0k1SbOXoa9J8PZI2lybf2VzBtc+EBIc3TarlsjWM2irkk1kLhUsuPKkV6qmwBB5TlEIrOl1cJeCNc2+31HfQTNKReNyF3HB0TrXQyV8r5dWaWODaZpOwfwgEZ9EIayQ+Kc0Tb9g4pdbX5Dpw7yPND1uYKDUaXHBJlGStIqFtuXB1v+Gayf1EH9jJjSWWB4v10KcrKwBhTa/Pns4gLwHTjEozYSfsihnuoiLGwTOslOtWwxFI8Re7C5diOek0+y+29rB1YNkyry8j/5OJo3shvNNdDUuzM6Ul7RJR4HY6eIcg6En1wDh8BPiJqJ25HwIZh1kYT5G3a3QcDBUaRdE+eHzrcB8c4kaj2q3U1SANiVZVRwqy32XYptVGd8rOHa2Fjc+m5BYrr5wKJZ45EOMqxpYMq7NXQ0sR8iEmYyg0KZm8whxq7xycDSmGmgjjgCo/XbyUGOl6ZC6xv/wQNp6s1sdFVhTY39FD2hTveLiXLmq/ArhBI7crGsU5TV/AJz+Jw7SfSBtaMjHv4LYiU6SNnUPRpz+WIXoi6lNSy4LNS4hOU9do8QEI6JXHkpbizO1WgM7TytUTq4DBHzqqoJ74XQrTWkQJaqFUkwlkeobkamo9e+H0tY6dqEZ9IDYFmCTavmdifLH6TXa6nBFNFNRbPeKlN/H0nabw4pLoGcFAm1arJugrTSBrtNWOaGu08Zl/LG0tTidsh3wnTZ0kG7VQXqVtprtq7Q9Z5C2OQu1FfCT91DaVurRLHDamEqb8AbWEZvwzQV1SVg/c0noKaca/441/MA7WEnflT+mqnoRWsfb9GTAej0lCoHU8qAEl8+i7TbnPCd43UCbmmwtlqHKFIPwfPWUaF1Tg3Po1LSai6CJ3/Zw2m4hbq7TFaVxJY+0BkdffZDnXLUZOITKUZ98PxLGlbJLMRRUikyQh9N2A3EjvsOxqZjywoTYwZndtVIitqgJAW+80OXEMgMnooK4QWYjSLEw5b2HJTlYSaQ/BnP50VXHUf3tEHmalPjKi0gxofxrOfK7F0IApeOIrxtb4SMhF8ESnNtejvzVQ7j77fc53BkImpsyHs/n3xAlBplsEBHB8tlut+uDr1ZWC+mf9LTc7cI9uJfllCmGDDnM55vFoMmvfws0n5F9HZEziFF3ipeeFPglk9Ehno74LIqkV1zGqsngC+pHkXT6URA2mWZISm8NSdzfkLodfvetiSufubqyBSN7jB5cox9Ih48Honx1x0iyI4tHZC7tXRt4LXDt0Fi54WfUT18V3XWH+T/1Y/ywbV3tW0VmpF30kKzBvbWT2RLE+Y2rEiO+wPl9vX5KNKNi51mnjlPjfJi9lW1snC2jH5SJOhbugOzyLwInT3lyoPbT0tfebiCZIb551v3oQyOuKGCtzcuDdhwepS9GHWOlAwQ/LvwemF0ofOK0HRiN04YppAqw98sEwpKZ8iOrxT8XZBtzVVz2afUFVp/m6D7n8kCqGgjz/cXJtoH3nrhM40dE9AuEaT74AS77NmkAx/FgzRXZ5fEwuEzWrkis5ezjMrh8pUNnqNZoeBwXRdI1vos7GqYv5WU7zqdDhw4dOnTo0KFDhw4dOnTo0KFDhw4dOnTo0KFDhw4dOnTo0KFDhw4dOvz/4n/9VBbXV/hmlgAAAABJRU5ErkJggg==">
+				<a href="https://github.com/edulongodevgeo/FourPay" target="_blank"> <!--Link to project-->
+				<div class="work-content">Projeto de Bootcamp profissional, API Restful de um banco, utilizando Spring boot e N dependências.</div></a>
+            </div> 	
+
+			<div class="card">
+			    <img class="work-img" src="data:image/png;base64,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">
+				<a href="https://github.com/edulongodevgeo/fourshopp_squad3" target="_blank"> <!--Link to project-->
+				<div class="work-content">Simulação em Bootcamp profissional (API REST em Java)</div></a>
+            </div> 	
+
+
+			<div class="card">
+			    <img class="work-img" src="data:image/png;base64,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">
+				<a href="https://github.com/edulongodevgeo/apirest_gis_springboot_postgis" target="_blank"> <!--Link to project-->
+				<div class="work-content">API REST desenvolvida para consumir e consolidar dados de extensão espacial (QGIS + PostGIS)</div></a>
+            </div> 	
+
+
+
+		  </div>
+		  </div>
+	  </div>
+		 
+		<!--──────────────Contact────────────────-->
+	  <div id="contact">
+		  <!--────social media links─────-->
+		  <div class="bizu-row"> 
+        <h3>Sociais<hr></h3>
+        <img src="img/cat_black.png" alt="cat logo" />
+      </div>
+		   <p>Dá uma espiadinha nas minhas redes :)</p>
+		    <div class="social-media">
+			  <a href="https://codepen.io/edulongodevgeo/pens/" target="_blank"><i class='fab fa-codepen'></i></a>
+			  <a href="https://github.com/edulongodevgeo" target="_blank"><i class='fab fa-github'></i></a>
+			  <a href="https://www.linkedin.com/in/eduardo-longo-devgeo/" target="_blank"><i class='fab fa-linkedin-in'></i></a>
+		    </div>
+		  </div>
+
+    <!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+	</main>
+	  <footer class="copyright">
+		  <a href="https://www.linkedin.com/in/eduardo-longo-devgeo/" target="_blank"> By @EduLongo</a>
+     </footer>
+	  
+  </div>
+  </body>
+</html>
