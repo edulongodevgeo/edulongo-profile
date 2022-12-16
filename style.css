@@ -443,7 +443,7 @@ hr {
 	.hamburger{
 		position:absolute;
 		top: 17px;
-		right: 25%;
+		right: 5%;
 		display: block;
 		cursor:pointer;
 		z-index: 5;
