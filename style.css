@@ -106,6 +106,16 @@ a.nav-link{
 	opacity:.20;
 }  
 
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 #home p, h2{
   font-family: 'Secular One', sans-serif;
 }
