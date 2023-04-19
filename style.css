@@ -104,6 +104,7 @@ a.nav-link{
     left: 0;
     right: 0;
     opacity:.20;
+    overflow-x: hidden;
 }  
 
 
