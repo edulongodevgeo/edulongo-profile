@@ -1,0 +1,956 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Storytelling DATABOLA</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="412e45f6-16cc-4f5a-b76e-b8d83fdf8210" class="page mono"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 76.88000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">⚽</span></div><h1 class="page-title">Storytelling DATABOLA</h1><p class="page-description"></p></header><div class="page-body"><p id="b2308601-c6fe-4cb2-b3de-9feb0c4f2a7a" class="">
+</p><p id="e4efab08-4fca-448f-ba6e-cd13bd69408b" class="">CREATE TABLE IF NOT EXISTS brasileiro_pontos_corridos.campeonato_brasileiro_full
+(
+id integer NOT NULL,
+rodata character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+data date,
+hora time without time zone,
+dia character varying(20) COLLATE pg_catalog.&quot;default&quot;,
+mandante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+visitante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+formacao_mandante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+formacao_visitante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+tecnico_mandante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+tecnico_visitante character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+vencedor character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+arena character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+mandante_placar integer,
+visitante_placar integer,
+mandante_estado character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+visitante_estado character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+CONSTRAINT campeonato_brasileiro_full_pkey PRIMARY KEY (id)
+)</p><p id="9b5a6d93-e810-4efe-a7c9-1c8bb853a272" class="">
+</p><p id="f9fb9995-360d-4d51-89f4-579d37a0465a" class="">CREATE TABLE IF NOT EXISTS brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full
+(
+partida_id integer NOT NULL,
+rodata integer,
+clube character varying(100) COLLATE pg_catalog.&quot;default&quot; NOT NULL,
+chutes integer,
+chutes_no_alvo integer,
+passes integer,
+faltas integer,
+cartao_amarelo integer,
+cartao_vermelho integer,
+impedimentos integer,
+escanteios integer,
+CONSTRAINT campeonato_brasileiro_estatisticas_full_pkey PRIMARY KEY (partida_id, clube),
+CONSTRAINT campeonato_brasileiro_estatisticas_full_partida_id_fkey FOREIGN KEY (partida_id)
+REFERENCES brasileiro_pontos_corridos.campeonato_brasileiro_full (id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+)</p><p id="68de9956-ba36-4955-a2e1-e82f3e0cf68e" class="">
+</p><p id="245399c3-1b66-4ad6-9fae-4256e370fd8e" class="">CREATE TABLE IF NOT EXISTS brasileiro_pontos_corridos.campeonato_brasileiro_gols
+(
+partida_id integer,
+rodata integer,
+clube character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+atleta character varying(255) COLLATE pg_catalog.&quot;default&quot;,
+minuto character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+tipo_de_gol character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+CONSTRAINT campeonato_brasileiro_gols_partida_id_fkey FOREIGN KEY (partida_id)
+REFERENCES brasileiro_pontos_corridos.campeonato_brasileiro_full (id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+)</p><p id="a9cd8033-ec67-473b-831b-a47d65d17aa6" class="">
+</p><p id="a26c8e92-1ad1-41f5-b275-b7be24b370ee" class="">CREATE TABLE IF NOT EXISTS brasileiro_pontos_corridos.campeonato_brasileiro_cartoes
+(
+partida_id integer,
+rodata integer,
+clube character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+cartao character varying(255) COLLATE pg_catalog.&quot;default&quot;,
+atleta character varying(255) COLLATE pg_catalog.&quot;default&quot;,
+num_camisa character varying(255) COLLATE pg_catalog.&quot;default&quot;,
+posicao character varying(255) COLLATE pg_catalog.&quot;default&quot;,
+minuto character varying(100) COLLATE pg_catalog.&quot;default&quot;,
+CONSTRAINT campeonato_brasileiro_cartoes_partida_id_fkey FOREIGN KEY (partida_id)
+REFERENCES brasileiro_pontos_corridos.campeonato_brasileiro_full (id) MATCH SIMPLE
+ON UPDATE NO ACTION
+ON DELETE NO ACTION
+)</p><p id="560126d7-26cb-45c2-bbfb-20039e404dd1" class="">
+</p><hr id="334db5e6-7407-4240-9358-767a160634e6"/><p id="94ba8601-7dec-4756-a2b2-efe4cc9229eb" class="">
+</p><h3 id="e2e43ded-3e5c-4a7d-aacc-b26c17d5243a" class="">1. <mark class="highlight-pink"><strong>Qual é a média de gols por partida do campeonato brasileiro?</strong></mark></h3><pre id="e50545b5-fd75-4a68-8560-7b2a795846c2" class="code code-wrap"><code>SELECT AVG(mandante_placar + visitante_placar) AS media_gols_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_full;</code></pre><p id="0d6bc5a8-26b7-4124-88c0-5f6d53529afb" class="">R: 2.57 gols por partida na Era dos pontos corridos.</p><p id="1259f47c-10bc-454b-ad22-afdeb6223162" class="">
+</p><h3 id="ca856346-7c58-4758-96de-97bfba3f677b" class="">2. <mark class="highlight-pink"><strong>Quais times têm a maior média de gols por partida?</strong></mark>
+* baseado em suas participações, e não no total do recorte histórico.</h3><pre id="d5e5e02e-015d-46fc-b22e-725d69225af9" class="code code-wrap"><code>SELECT
+    times.clube,
+    AVG(gols.mandante_placar + gols.visitante_placar) AS media_gols_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_full AS gols
+JOIN (
+    SELECT
+        clube,
+        COUNT(DISTINCT id) AS jogos_disputados
+    FROM (
+        SELECT
+            id,
+            mandante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+        UNION ALL
+        SELECT
+            id,
+            visitante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+    ) AS jogos
+    GROUP BY clube
+) AS times ON gols.mandante = times.clube OR gols.visitante = times.clube
+GROUP BY times.clube
+ORDER BY media_gols_por_partida DESC;
+</code></pre><p id="e2fe73c0-67a2-486e-b157-700270171a52" class="">
+</p><figure id="e56fad8b-2431-4ab8-9394-607942a490d2" class="image"><a href="Storytelling%20DATABOLA%20412e45f616cc4f5ab76eb8d83fdf8210/databola01.png"><img style="width:964px" src="Storytelling%20DATABOLA%20412e45f616cc4f5ab76eb8d83fdf8210/databola01.png"/></a></figure><ol type="1" id="d822b6f9-0271-44f6-af68-f0fced1722b1" class="numbered-list" start="1"><li>&quot;Paysandu&quot;	3.2686567164179104</li></ol><ol type="1" id="3dea2881-1356-4523-bcb6-e72a3bf1369c" class="numbered-list" start="2"><li>&quot;Santa Cruz&quot;	3.0394736842105263</li></ol><ol type="1" id="f38c653a-1d85-4849-b4d5-9fc68d79e630" class="numbered-list" start="3"><li>&quot;Barueri&quot;	2.9210526315789474</li></ol><ol type="1" id="b2342f47-33ec-4069-9c87-d69749c69c91" class="numbered-list" start="4"><li>&quot;Nautico&quot;	2.8526315789473684</li></ol><ol type="1" id="0a845576-9015-4a84-a607-27373e2daed9" class="numbered-list" start="5"><li>&quot;Santo Andre&quot;	2.8157894736842105</li></ol><ol type="1" id="65b2cccb-654b-467f-bcb0-0330e9eeb3df" class="numbered-list" start="6"><li>&quot;Goias&quot;	2.7880434782608696</li></ol><ol type="1" id="36d426fd-945e-4b02-8c3b-a7c20b890bf8" class="numbered-list" start="7"><li>&quot;Brasiliense&quot;	2.7857142857142857</li></ol><ol type="1" id="2d2d171e-0fcd-4cb5-86db-be31d56eedb9" class="numbered-list" start="8"><li>&quot;Parana&quot;	2.7459677419354839</li></ol><ol type="1" id="3628d1b2-b95e-4205-b10f-851bd81fc1de" class="numbered-list" start="9"><li>&quot;Ipatinga&quot;	2.7368421052631579</li></ol><ol type="1" id="b54523ac-44f9-48a7-bff3-c25830c8b1e8" class="numbered-list" start="10"><li>&quot;America-RN&quot;	2.7368421052631579</li></ol><p id="ef4ed8a4-e0c9-4c69-a516-748d612fa6b8" class="">
+</p><h3 id="9c5f3ee2-711b-43c4-a276-05d091881bcc" class="">3. <mark class="highlight-pink"><strong>Quais jogadores têm a maior quantidade de gols marcados no campeonato?</strong></mark></h3><p id="24ad3b8b-3209-4c7c-b69c-25ce9465e4f8" class="">R: Gabriel Barbosa = 92</p><pre id="d29dc8ad-e722-4a32-8b33-759ca7a018ad" class="code code-wrap"><code>SELECT
+    atleta,
+    COUNT(*) AS quantidade_de_gols
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_gols
+GROUP BY atleta
+ORDER BY quantidade_de_gols DESC;
+
+-- Para listar apenas os 20 maiores resultados
+SELECT
+    atleta,
+    COUNT(*) AS quantidade_de_gols
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_gols
+GROUP BY atleta
+ORDER BY quantidade_de_gols DESC
+LIMIT 20;</code></pre><p id="c5de562a-38b8-44a7-bd5b-fe35ff959663" class="">
+</p><h3 id="f39d376b-14c1-452e-8db4-11dd531f0d20" class="">4. <mark class="highlight-pink"><strong>Qual é a média de chutes/chutes no alvo por partida do campeonato brasileiro?</strong></mark>
+* Todo recorte histórico.</h3><p id="ca7667f5-2bd1-4435-abf0-d36f7a0d8843" class="">R: </p><p id="4d8235eb-152b-4883-8e7c-7b534ca1c5a1" class="">Média de Chutes por Partida = 4.84</p><p id="76a9b453-2e42-4db7-854a-2f74087216ed" class="">Média de Chutes no Alvo por partida = 1.20</p><pre id="ea6f2c4c-3d6e-400f-b7cf-8048c19b8577" class="code code-wrap"><code>SELECT
+    AVG(estatisticas.chutes) AS media_chutes_por_partida,
+    AVG(estatisticas.chutes_no_alvo) AS media_chutes_no_alvo_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id;
+</code></pre><h3 id="b642601e-5fb8-4a8b-a870-4b25bdf66def" class="">5. <mark class="highlight-pink"><strong>Quais times têm a maior média de chutes/chutes no alvo por partida?</strong></mark></h3><p id="958cec43-fadf-49a9-a30c-e526dcbec99b" class="">* baseado em suas participações, e não no total do recorte histórico.</p><p id="f266c0e8-75eb-42e3-b680-673272dfbe85" class="">
+</p><pre id="f262a29d-0c4a-4d94-9eaf-fc5f05fa665c" class="code code-wrap"><code>SELECT
+    times.clube,
+    AVG(estatisticas.chutes) AS media_chutes_por_partida,
+    AVG(estatisticas.chutes_no_alvo) AS media_chutes_no_alvo_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id
+JOIN (
+    SELECT
+        clube,
+        COUNT(DISTINCT id) AS jogos_disputados
+    FROM (
+        SELECT
+            id,
+            mandante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+        UNION ALL
+        SELECT
+            id,
+            visitante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+    ) AS jogos
+    GROUP BY clube
+) AS times ON jogos.mandante = times.clube OR jogos.visitante = times.clube
+GROUP BY times.clube
+ORDER BY media_chutes_no_alvo_por_partida DESC;
+</code></pre><h3 id="7b0c112c-a3d9-466f-a47d-9510e6f4f934" class=""><strong><mark class="highlight-pink">Quais jogadores têm a maior quantidade de chutes/chutes no alvo no campeonato?</mark></strong></h3><pre id="6a721c30-6b4c-426c-9256-04a9ee1150bc" class="code code-wrap"><code>SELECT
+    g.atleta,
+    SUM(e.chutes) AS total_chutes,
+    SUM(e.chutes_no_alvo) AS total_chutes_no_alvo
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_gols AS g
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS e
+    ON g.partida_id = e.partida_id AND g.clube = e.clube
+GROUP BY g.atleta
+ORDER BY total_chutes DESC, total_chutes_no_alvo DESC
+LIMIT 20;
+</code></pre><h3 id="9e770739-dac2-4e54-b7c5-9c33fa1611d4" class=""><mark class="highlight-pink"><strong>Qual é a média de passes por partida do campeonato brasileiro?</strong></mark></h3><pre id="a76eeeb4-b649-4f0a-981f-fb0cac564050" class="code code-wrap"><code>SELECT
+    AVG(estatisticas.passes) AS media_passes_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id;
+</code></pre><h3 id="0738f0da-e43a-4591-86d4-86e07dc8ac78" class=""><mark class="highlight-pink"><strong>Quais jogadores têm a maior quantidade de passes no campeonato?</strong></mark></h3><pre id="f808573d-62d3-4947-8795-9ccc7cb19e48" class="code code-wrap"><code>SELECT
+    g.atleta,
+    SUM(e.passes) AS total_passes
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_gols AS g
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS e
+    ON g.clube = e.clube
+GROUP BY g.atleta
+ORDER BY total_passes DESC
+LIMIT 20;
+</code></pre><h3 id="324e6784-d593-4046-ac63-f197cab1ba86" class=""><mark class="highlight-pink"><strong>Qual é a quantidade média de faltas por partida do campeonato brasileiro?</strong></mark></h3><pre id="64dcc26b-3149-415b-a26f-98fe8cb62fa8" class="code code-wrap"><code>SELECT
+    AVG(estatisticas.faltas) AS media_faltas_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id;
+</code></pre><h3 id="631d3c97-cee6-4946-8189-795894444f62" class=""><mark class="highlight-pink"><strong>Quais times têm a maior quantidade média de faltas por partida?</strong></mark></h3><pre id="76fe94fc-f08e-4523-a103-8748dddebc69" class="code code-wrap"><code>SELECT
+    times.clube,
+    AVG(estatisticas.faltas) AS media_faltas_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id
+JOIN (
+    SELECT
+        clube,
+        COUNT(DISTINCT id) AS jogos_disputados
+    FROM (
+        SELECT
+            id,
+            mandante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+        UNION ALL
+        SELECT
+            id,
+            visitante AS clube
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_full
+    ) AS jogos
+    GROUP BY clube
+) AS times ON jogos.mandante = times.clube OR jogos.visitante = times.clube
+GROUP BY times.clube
+ORDER BY media_faltas_por_partida DESC;
+</code></pre><h3 id="2cf0632c-1d09-4058-9fed-200504fb8499" class=""><mark class="highlight-pink"><strong>Quais jogadores têm a maior quantidade de faltas sofridas no campeonato?</strong></mark></h3><pre id="b3c83eac-e331-41a3-a681-e508c1b13ca6" class="code code-wrap"><code>SELECT
+    cbg.atleta,
+    SUM(ce.faltas) AS quantidade_de_faltas_sofridas
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full ce
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_gols cbg ON ce.partida_id = cbg.partida_id AND ce.clube = cbg.clube
+GROUP BY cbg.atleta
+ORDER BY quantidade_de_faltas_sofridas DESC;</code></pre><h3 id="21fa3918-92dd-40f3-af4e-8628ac2ee6a0" class=""><mark class="highlight-pink"><strong>Qual é a quantidade média de cartões amarelos e vermelhos por rodada do campeonato brasileiro (</strong></mark><span style="border-bottom:0.05em solid"><mark class="highlight-pink"><strong>filtrado por ANO</strong></mark></span><mark class="highlight-pink"><strong>)?</strong></mark></h3><pre id="927293be-a594-436d-9202-51c6987da096" class="code code-wrap"><code></code></pre><h3 id="c8671830-1b5f-4951-b891-5986cf09bc29" class=""><strong><mark class="highlight-pink">Quais partidas têm a maior quantidade de cartões (</mark></strong><span style="border-bottom:0.05em solid"><strong><mark class="highlight-pink">+ ano</mark></strong></span><mark class="highlight-pink"><strong>)?</strong></mark></h3><pre id="3f09f1a7-6878-4d92-8fdc-4bf3b71a44b5" class="code code-wrap"><code>SELECT
+    cbf.id AS partida_id,
+    cbf.rodata,
+    EXTRACT(YEAR FROM cbf.data) AS ano,
+    cbf.mandante AS time_mandante,
+    cbf.visitante AS time_visitante,
+    SUM(CASE WHEN cartao = &#x27;Amarelo&#x27; THEN 1 ELSE 0 END) AS quantidade_cartoes_amarelos,
+    SUM(CASE WHEN cartao = &#x27;Vermelho&#x27; THEN 1 ELSE 0 END) AS quantidade_cartoes_vermelhos
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_full cbf
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_cartoes cbc
+    ON cbf.id = cbc.partida_id
+GROUP BY cbf.id, cbf.rodata, ano, time_mandante, time_visitante
+ORDER BY quantidade_cartoes_vermelhos DESC;</code></pre><h3 id="40732c45-487a-4589-b545-db48d55a1a88" class=""><mark class="highlight-pink"><strong>Quais times têm a maior quantidade de cartões amarelos e vermelhos por partida e ano?</strong></mark></h3><pre id="91131a81-0166-436c-aacb-2bb3eeedc96d" class="code"><code>SELECT
+    cbf.id AS partida_id,
+    cbf.rodata,
+    EXTRACT(YEAR FROM cbf.data) AS ano,
+    cbc.clube AS time,
+    SUM(CASE WHEN cartao = &#x27;Amarelo&#x27; THEN 1 ELSE 0 END) AS quantidade_cartoes_amarelos,
+    SUM(CASE WHEN cartao = &#x27;Vermelho&#x27; THEN 1 ELSE 0 END) AS quantidade_cartoes_vermelhos
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_full cbf
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_cartoes cbc
+    ON cbf.id = cbc.partida_id
+GROUP BY cbf.id, cbf.rodata, ano, time
+ORDER BY quantidade_cartoes_amarelos DESC, quantidade_cartoes_vermelhos DESC;</code></pre><h3 id="cd11fe35-1d88-4223-b8c7-e7d2581a2eab" class=""><mark class="highlight-pink"><strong>Quais jogadores têm a maior quantidade de cartões amarelos e vermelhos no campeonato?</strong></mark></h3><pre id="a8dbe3d2-bac4-4802-be7f-8e66eaf3bdbc" class="code code-wrap"><code>SELECT
+    atleta,
+    COUNT(*) FILTER (WHERE cartao = &#x27;Amarelo&#x27;) AS total_cartoes_amarelos,
+    COUNT(*) FILTER (WHERE cartao = &#x27;Vermelho&#x27;) AS total_cartoes_vermelhos
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_cartoes
+GROUP BY atleta
+ORDER BY total_cartoes_vermelhos DESC, total_cartoes_amarelos DESC;</code></pre><h3 id="1dd82a1a-51a7-4101-8cf6-87dfb987929c" class=""><mark class="highlight-pink"><strong>Qual é a quantidade média de impedimentos por partida do campeonato brasileiro?</strong></mark></h3><pre id="61c5805c-492a-4af0-a470-f84c67b90dae" class="code code-wrap"><code>SELECT
+    AVG(estatisticas.impedimentos) AS media_impedimentos_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id;
+</code></pre><h3 id="132d0476-a14e-46ca-a424-1623274fef62" class=""><strong><mark class="highlight-pink">Quais times têm a maior quantidade de impedimentos por partida (</mark></strong><span style="border-bottom:0.05em solid"><strong><mark class="highlight-pink">+ ano</mark></strong></span><mark class="highlight-pink"><strong>)?</strong></mark></h3><pre id="1b3e1fd2-d532-4046-bc31-85fd4b70f229" class="code code-wrap"><code>SELECT
+    ano,
+    time,
+    SUM(quantidade_de_impedimentos) AS total_impedimentos
+FROM
+    (
+        SELECT
+            cbf.data AS ano,
+            cbf.mandante AS time,
+            cbe.impedimentos AS quantidade_de_impedimentos
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full cbe
+        INNER JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full cbf
+            ON cbe.partida_id = cbf.id
+
+        UNION ALL
+
+        SELECT
+            cbf.data AS ano,
+            cbf.visitante AS time,
+            cbe.impedimentos AS quantidade_de_impedimentos
+        FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full cbe
+        INNER JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full cbf
+            ON cbe.partida_id = cbf.id
+    ) AS total_impedimentos_por_time
+GROUP BY ano, time
+ORDER BY total_impedimentos DESC;</code></pre><h3 id="631ba09d-bc0c-4fce-b68a-a2fd6135a25b" class=""><strong><mark class="highlight-pink">Quais jogadores têm a maior quantidade de impedimentos no campeonato (</mark></strong><span style="border-bottom:0.05em solid"><strong><mark class="highlight-pink">+ ano</mark></strong></span><strong><mark class="highlight-pink">)?</mark></strong></h3><pre id="6390c3d9-39ab-4182-ad95-014c7ae1f566" class="code code-wrap"><code>SELECT
+    cbg.atleta,
+    date_part(&#x27;year&#x27;, cbf.data) AS ano,
+    SUM(cbe.impedimentos) AS total_impedimentos
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_gols cbg
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full cbf ON cbg.partida_id = cbf.id
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full cbe ON cbf.id = cbe.partida_id AND cbg.clube = cbe.clube
+GROUP BY cbg.atleta, date_part(&#x27;year&#x27;, cbf.data)
+ORDER BY total_impedimentos DESC;</code></pre><h3 id="a9039660-e159-4180-9202-e29167239643" class=""><mark class="highlight-pink"><strong>Qual é a quantidade média de escanteios por partida do campeonato brasileiro?</strong></mark></h3><pre id="60b632c1-116a-4a66-a14e-64d076c5fe57" class="code code-wrap"><code>SELECT
+    AVG(estatisticas.escanteios) AS media_escanteios_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full AS estatisticas
+JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full AS jogos ON estatisticas.partida_id = jogos.id;</code></pre><h3 id="933435d1-8ef4-4125-a235-afff9418d07f" class=""><mark class="highlight-pink"><strong>Quais times têm a maior quantidade média de escanteios por partida </strong></mark><span style="border-bottom:0.05em solid"><mark class="highlight-pink"><strong>(filtrado por ano)</strong></mark></span><mark class="highlight-pink"><strong>?</strong></mark></h3><pre id="96edecad-9391-463d-aed8-7247c22bb1e1" class="code code-wrap"><code>SELECT
+    cbef.clube,
+    AVG(cbef.escanteios) AS media_escanteios_por_partida
+FROM brasileiro_pontos_corridos.campeonato_brasileiro_estatisticas_full cbef
+INNER JOIN brasileiro_pontos_corridos.campeonato_brasileiro_full cbf
+    ON cbef.partida_id = cbf.id
+WHERE EXTRACT(YEAR FROM cbf.data) = 2022
+GROUP BY cbef.clube
+ORDER BY media_escanteios_por_partida DESC;</code></pre><p id="a32beccd-5364-4430-9d3a-41f082a36d93" class="">
+</p></div></article></body></html>
