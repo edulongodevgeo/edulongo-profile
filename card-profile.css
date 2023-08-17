@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Indie+Flower&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
 
 
-#listra {
+#lista {
   --s: 80px; /* control the size */
   --c: #542437;
   
@@ -14,7 +15,7 @@
   --_g1: repeating-linear-gradient(-45deg,var(--_g));
   background:
     var(--_g0),var(--_g0) var(--s) var(--s),
-    var(--_g1),var(--_g1) var(--s) var(--s) #06d08d;
+    var(--_g1),var(--_g1) var(--s) var(--s) #bd5050;
   background-size: calc(2*var(--s)) calc(2*var(--s));
 
   margin: auto;
@@ -91,7 +92,7 @@
   border: 1px solid black;
   padding: 1em 2em;
   
-  font-family: 'Secular One', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-size:1rem;
 	padding: 10px;
   
@@ -104,7 +105,7 @@
 }
 
 .modal__inner h2 {
-  font-family: 'Barrio', cursive;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 .modal__inner img {
@@ -167,16 +168,16 @@
 
   margin: 20px;
 
-  font-family: 'Barrio', cursive;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 .btn:hover,
 .btn:focus {
-  background: #19a453;
+  background: #c04d70;
 }
 
 .btn:active {
-  background: #27ae60;
+  background: #c04d70;
   box-shadow: 0 1px 2px rgba(0,0,0, .2) inset;
 }
 
