@@ -94,20 +94,6 @@ a.nav-link{
 	justify-content: space-evenly;
 }
 
-#home .filter{
-	background: url('https://cdn.pixabay.com/photo/2015/09/09/17/18/stadium-931975_960_720.jpg') no-repeat;
-	background-size: cover;
-	background-position:center;
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity:.20;
-    overflow-x: hidden;
-}  
-
-
 video {
   object-fit: cover;
   width: 100%;
@@ -115,8 +101,11 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  opacity:.20;
+  opacity: 0.4;
 }
+
+
+
 
 #home p, h2{
 	font-family: 'Red Hat Display', sans-serif;
@@ -149,7 +138,7 @@ video {
 
 .intro-edu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
@@ -198,6 +187,22 @@ video {
       Edu Profile-modal CSS próprio
 ──────────────────*/
 
+#edu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+}
+
+.habilidades{
+    width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+}
 
 /*──────────────────
       projects
@@ -214,6 +219,7 @@ video {
 	color: var(--main-fonts-color);
   	background-color: var(--main-background);
 }
+
 #projects h3{
     padding-top: 70px;
 }
@@ -425,12 +431,15 @@ hr {
 @media only screen and (max-width: 1484px) and (min-width: 1214px) {
 	.work{
         padding:20px 20%;
+		
     }
+
 }
 @media only screen and (max-width: 1214px) and (min-width: 1000px) {
 	.work{
         padding:20px 12%;
     }
+
 }
 
 
@@ -540,4 +549,19 @@ hr {
   h1 {
     font-size:24px;
   }
+
+  .work {
+    display: flex;
+	flex-direction: column;    
+}
+
+.habilidades{
+    width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+}
+
 }
