@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Indie+Flower&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Handjet:wght@600&family=Red+Hat+Display:wght@300&family=Teko:wght@600&display=swap');
+
 
 :root{
 	--main-background: #0b0c0f;
 	--main-fonts-color: #fff;
-	--main-decor-color:#bd5050;
+	--main-decor-color:#01db87;
   	--main-header-background:#000000;
 	--main-font-family: 'Red Hat Display', sans-serif;
 }
@@ -129,7 +130,7 @@ video {
  h3{
 	padding-bottom: 15px;
     letter-spacing: normal;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Teko', sans-serif;
 	font-style: normal;
 	font-size: 60px;
 	color: var(--main-fonts-color);
@@ -250,13 +251,14 @@ video {
 	padding: 10px;
 
 	 /* Adicionar borda */
-	 border: 3px solid white;
+	 border: 1px solid rgb(255, 255, 255);
 	 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adicionar sombra suave */
 }
 
 .card img {
     width: 120px; /* Defina o tamanho desejado para a imagem */
     height: 120px;
+	border: 0.1px solid rgb(255, 255, 255);
 	object-fit: cover;
     border-radius: 50%; /* Tornar a imagem circular */
     object-fit: cover; /* Redimensionar a imagem mantendo a proporção */
