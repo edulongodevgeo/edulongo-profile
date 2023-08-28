@@ -271,6 +271,7 @@ video {
     text-align: center;
     padding: 10px 5px;
     font-size: 1rem;
+	font-weight: bold;
     color: var(--main-fonts-color);
 	font-family: 'Red Hat Display', sans-serif;
     cursor: pointer;
